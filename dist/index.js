@@ -1,25 +1,12 @@
 "use strict";
-function sayHello(messag) {
-    console.log(`Message : ${messag}`);
-}
-sayHello("Uditha");
-const helloIsuru = (messages) => {
-};
-const horekda = (names, Theif) => {
-    if (Theif) {
-        console.log(`${names}`);
-    }
-    else {
-        console.log(`${names}`);
+const students = {
+    names: "uditha",
+    age: 23,
+    address: {
+        city: "kurunegala",
+        post: 23333
     }
 };
-horekda("ranil", true);
-horekda('anura');
-function sum(...values) {
-    let ttl = 0;
-    for (let temp of values) {
-        ttl += temp;
-    }
-    return ttl;
-}
-console.log(sum(10, 20, 30));
+console.log(students);
+console.log(students.names);
+console.log(students.address.post);

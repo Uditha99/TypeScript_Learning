@@ -1,12 +1,10 @@
 "use strict";
-const students = {
-    names: "uditha",
-    age: 23,
-    address: {
-        city: "kurunegala",
-        post: 23333
+class Students {
+    constructor(names, age, address) {
+        this.names = names;
+        this.age = age;
+        this.address = address;
     }
-};
-console.log(students);
-console.log(students.names);
-console.log(students.address.post);
+}
+let student = new Students("uditah", 90, { city: "kaluthara", post: 10 });
+console.log(student);

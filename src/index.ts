@@ -1,27 +1,26 @@
 //==========> objects
-// literals with intrface
+// objects with class
 
-interface Students{
-    names:string,
-    age:number,
+class Students{
+    names:string;
+    age: number;
+
     address:{
-        city:string,
-        post:number
+        city:string;
+        post:number;
     }
+
+    constructor(names:string, age:number , address:{city:string , post:number}){
+        this.names=names;
+        this.age=age;
+        this.address=address;
+    }
+
 }
 
-const students:Students = {
-    names: "uditha",
-    age:23,
-    address:{
-        city:"kurunegala",
-        post: 23333
-    }
-}
+ let student:Students= new Students("uditah", 90 , {city:"kaluthara" , post:10})
 
-console.log(students);
-console.log(students.names);
-console.log(students.address.post);
+console.log(student);
 
 
 

@@ -1,7 +1,16 @@
 //==========> objects
-// literals
+// literals with intrface
 
-const students = {
+interface Students{
+    names:string,
+    age:number,
+    address:{
+        city:string,
+        post:number
+    }
+}
+
+const students:Students = {
     names: "uditha",
     age:23,
     address:{

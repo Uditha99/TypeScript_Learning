@@ -1,19 +1,29 @@
 //==========>\
-// genaric
+// genaric reusable components
 
-function getdata<T>(value:T):T{
-    return value
+/*interface Shape1{
+    type:string
 }
 
+interface Shape2{
+    type:number
+}
+interface Shape3{
+    type:boolean
+}
 
-let numbervalue = getdata<number>(2)
-let stringValue=getdata<string>("h")
+let s1:Shape1 = {type:""}
+let s2:Shape2 = {type:2}
+let s3:Shape3 = {type:true}
+*/
 
-console.log(numbervalue);
-console.log(stringValue);
+interface Shape<T>{
+    type:T
+}
 
-
-
+let s1:Shape<string> = {type:""}
+let s2:Shape<number> = {type:2}
+let s3:Shape<boolean> = {type:true}
 
 
  

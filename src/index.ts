@@ -1,22 +1,40 @@
 //==========>\
-// interface extends anther interface
+// inheritance
 
-interface Laptop{
-    cost:number,
-    type:string
+class animal{
+    name:string;
+    age : number;
+
+    constructor(name:string,age:number){
+        this.name=name
+        this.age=age
+    }
+
+    sound() {
+        console.log(`${this.name} sound`);
+        
+    }
 }
 
-interface mac extends Laptop{
-    byeElemant:boolean
+class dog extends animal{
+    breed:string;
+
+    constructor(name:string,age:number,breed:string){
+        super(name,age)
+        this.breed=breed
+    }
 }
 
-interface windows extends Laptop{
+let a1 = new animal("animal",10)
+let d1 = new dog("dog" , 2 , "dg breed")
 
-}
+console.log(a1);
+console.log(d1);
 
-const m1:mac={cost:20,type:"fff",byeElemant:true}
+a1.sound()
+d1.sound()
 
-const w1:windows={cost:69 , type:"kkk"}
+
 
 
 

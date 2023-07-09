@@ -1,19 +1,30 @@
 //==========>\
-// type guards
+// type guards (=> typeof , indtsnce of , in)
 
-function setdata(value:number | string){
-
-    if(typeof value ==='number'){
-        console.log(`this is number`);
-    }else{
-        console.log(`this is string`);
+class Dog{
+    sound(){
+        console.log(`dog sound`);
+        
     }
-    
-    
 }
 
-setdata(10)
-setdata("ssss")
+class Cat{
+    soundcat(){
+        console.log(`cat sound`);
+        
+    }
+}
+
+function executeSound(value:Dog | Cat){
+        if(value instanceof Dog){
+            value.sound();
+        }else{
+            value.soundcat()
+        }
+}
+
+executeSound(new Dog())
+executeSound(new Cat())
 
 
 

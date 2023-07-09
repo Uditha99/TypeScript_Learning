@@ -2,29 +2,27 @@
 // type guards (=> typeof , indtsnce of , in)
 
 class Dog{
-    sound(){
-        console.log(`dog sound`);
-        
-    }
+    name:string;
+
+    constructor(name:string){this.name=name}
 }
 
 class Cat{
-    soundcat(){
-        console.log(`cat sound`);
-        
-    }
+    age:number;
+
+    constructor(age:number){this.age=age}
 }
 
 function executeSound(value:Dog | Cat){
-        if(value instanceof Dog){
-            value.sound();
+        if('name' in value){
+            value.name;
         }else{
-            value.soundcat()
+            value.age
         }
 }
 
-executeSound(new Dog())
-executeSound(new Cat())
+executeSound(new Dog('s'))
+executeSound(new Cat(3))
 
 
 

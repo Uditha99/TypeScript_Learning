@@ -1,24 +1,24 @@
-//==========> optinal
-// Read only
+//==========>\
+// interface extends anther interface
 
-interface Animal{
-    name:string,
-    age?:number,
-    readonly isActive:boolean
+interface Laptop{
+    cost:number,
+    type:string
 }
 
-const a1:Animal = {
-    name:"dog",
-    isActive:true
+interface mac extends Laptop{
+    byeElemant:boolean
 }
 
-const a2:Animal = {
-    name:"cat",
-    age:5,
-    isActive:true
+interface windows extends Laptop{
+
 }
 
-a1.isActive = false
+const m1:mac={cost:20,type:"fff",byeElemant:true}
+
+const w1:windows={cost:69 , type:"kkk"}
+
+
 
  
  

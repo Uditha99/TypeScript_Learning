@@ -1,17 +1,11 @@
 "use strict";
-function dev(num1, num2) {
-    if (num2 == 0) {
-        throw new Error("Wrong Input");
+function setdata(value) {
+    if (typeof value === 'number') {
+        console.log(`this is number`);
     }
-    return num1 / num2;
+    else {
+        console.log(`this is string`);
+    }
 }
-try {
-    let answer = dev(10, 0);
-    console.log(answer);
-}
-catch (error) {
-    console.log(error);
-}
-finally {
-    console.log("ok");
-}
+setdata(10);
+setdata("ssss");

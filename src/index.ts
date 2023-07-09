@@ -1,24 +1,19 @@
 //==========>\
-// try catch
+// type guards
 
-function dev(num1:number , num2:number):number{
+function setdata(value:number | string){
 
-    if(num2==0){
-        throw new Error("Wrong Input")
+    if(typeof value ==='number'){
+        console.log(`this is number`);
+    }else{
+        console.log(`this is string`);
     }
-    return num1/num2
-}
- 
-try{
-    let answer = dev(10,0)
-    console.log(answer);
-}catch(error){
-    console.log(error);
     
-}finally{
-    console.log("ok");
     
 }
+
+setdata(10)
+setdata("ssss")
 
 
 

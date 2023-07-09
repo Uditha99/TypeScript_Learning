@@ -1,39 +1,38 @@
 //==========>\
-// inheritance
+// abstract
 
-class animal{
-    name:string;
-    age : number;
+abstract class Phone1 { //eshan
 
-    constructor(name:string,age:number){
-        this.name=name
-        this.age=age
+    private displaySize:string
+
+    constructor(displaySize:string){
+        this.displaySize=displaySize
     }
 
-    sound() {
-        console.log(`${this.name} sound`);
+    call():void{
+        console.log("calling........"); 
+    }
+
+    message(){
+        console.log("messaging....");
+    }
+
+    abstract flieTransfer():void;
+}
+
+abstract class PhneOshada extends Phone1{
+    dancing(){
+        console.log("dancing.....");
         
     }
 }
 
-class dog extends animal{
-    breed:string;
-
-    constructor(name:string,age:number,breed:string){
-        super(name,age)
-        this.breed=breed
+class hasanthaPhone extends PhneOshada{
+    flieTransfer(): void {
+        console.log("filetransefering........");
+        
     }
 }
-
-let a1 = new animal("animal",10)
-let d1 = new dog("dog" , 2 , "dg breed")
-
-console.log(a1);
-console.log(d1);
-
-a1.sound()
-d1.sound()
-
 
 
 

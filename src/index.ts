@@ -1,32 +1,17 @@
 //==========>\
-// genaric reusable components
+// genaric constrain
 
-/*interface Shape1{
-    type:string
+interface elemantLength{
+    length:number
 }
 
-interface Shape2{
-    type:number
-}
-interface Shape3{
-    type:boolean
+function showLength<T extends elemantLength>(value:T){
+    console.log(value.length);
+    
 }
 
-let s1:Shape1 = {type:""}
-let s2:Shape2 = {type:2}
-let s3:Shape3 = {type:true}
-*/
-
-interface Shape<T>{
-    type:T
-}
-
-let s1:Shape<string> = {type:""}
-let s2:Shape<number> = {type:2}
-let s3:Shape<boolean> = {type:true}
-
-
- 
+ showLength([1,2,3])
+ showLength("ww")
  
 
 

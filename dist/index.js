@@ -1,8 +1,6 @@
 "use strict";
-function getdata(value) {
-    return value;
+function showLength(value) {
+    console.log(value.length);
 }
-let numbervalue = getdata(2);
-let stringValue = getdata("h");
-console.log(numbervalue);
-console.log(stringValue);
+showLength([1, 2, 3]);
+showLength("ww");

@@ -1,38 +1,17 @@
 //==========>\
-// abstract
+// genaric
 
-abstract class Phone1 { //eshan
-
-    private displaySize:string
-
-    constructor(displaySize:string){
-        this.displaySize=displaySize
-    }
-
-    call():void{
-        console.log("calling........"); 
-    }
-
-    message(){
-        console.log("messaging....");
-    }
-
-    abstract flieTransfer():void;
+function getdata<T>(value:T):T{
+    return value
 }
 
-abstract class PhneOshada extends Phone1{
-    dancing(){
-        console.log("dancing.....");
-        
-    }
-}
 
-class hasanthaPhone extends PhneOshada{
-    flieTransfer(): void {
-        console.log("filetransefering........");
-        
-    }
-}
+let numbervalue = getdata<number>(2)
+let stringValue=getdata<string>("h")
+
+console.log(numbervalue);
+console.log(stringValue);
+
 
 
 

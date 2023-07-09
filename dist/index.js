@@ -1,10 +1,20 @@
 "use strict";
-class Students {
-    constructor(names, age, address) {
+class Dog {
+    constructor(names, age) {
         this.names = names;
         this.age = age;
-        this.address = address;
+    }
+    setAge(age) {
+        if (age < 0) {
+            return;
+        }
+        else {
+            this.age = age;
+            console.log(this.age);
+        }
     }
 }
-let student = new Students("uditah", 90, { city: "kaluthara", post: 10 });
-console.log(student);
+let dog = new Dog("Rosy", 10);
+console.log(dog);
+console.log(dog.setAge(-6));
+console.log(dog.setAge(5));

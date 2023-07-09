@@ -1,26 +1,28 @@
-//==========> objects
-// objects with class
+//==========> optinal
+// Read only
 
-class Students{
-    names:string;
-    age: number;
-
-    address:{
-        city:string;
-        post:number;
-    }
-
-    constructor(names:string, age:number , address:{city:string , post:number}){
-        this.names=names;
-        this.age=age;
-        this.address=address;
-    }
-
+interface Animal{
+    name:string,
+    age?:number,
+    readonly isActive:boolean
 }
 
- let student:Students= new Students("uditah", 90 , {city:"kaluthara" , post:10})
+const a1:Animal = {
+    name:"dog",
+    isActive:true
+}
 
-console.log(student);
+const a2:Animal = {
+    name:"cat",
+    age:5,
+    isActive:true
+}
+
+a1.isActive = false
+
+ 
+ 
+
 
 
 

@@ -1,34 +1,18 @@
-//==========>\union types
+//==========>key of
 // 
 
-interface Vehicle{
-    name:string
+interface student{
+    name:string,
+    age:number,
+    isActive:boolean
 }
 
-interface car extends Vehicle{
-    names:"car1",
-    drive():void;
-}
+type Studentkey = keyof student
 
-interface van extends Vehicle{
-    names:"van",
-    start():void;
-}
-
-type vehical =  car | van
-
-function execution(v1 : vehical){
-    if(v1.name =='car'){
-        console.log("car");
-        
-    }else
-    {
-        console.log("vsn");
-    }
-}
-
-
-
+const studentName:Studentkey = "name"
+const studentAge:Studentkey = "age"
+const studentAc:Studentkey = "isActive"
+  
 
 
 

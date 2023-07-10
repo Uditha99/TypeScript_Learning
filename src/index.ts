@@ -1,31 +1,22 @@
-//==========>\
-// type guards (=> typeof , indtsnce of , in)
+//==========>\type casting
+// asserton
 
-class Dog{
-    name:string;
-
-    constructor(name:string){this.name=name}
+interface Vehicle{
+    type:string
 }
 
-class Cat{
-    age:number;
-
-    constructor(age:number){this.age=age}
+interface car extends Vehicle{
+    drive():void;
 }
 
-function executeSound(value:Dog | Cat){
-        if('name' in value){
-            value.name;
-        }else{
-            value.age
-        }
+interface van extends Vehicle{
+    start():void;
 }
 
-executeSound(new Dog('s'))
-executeSound(new Cat(3))
 
-
-
+function execution(vehical:Vehicle){
+    (vehical as van).start()
+}
 
 
 
